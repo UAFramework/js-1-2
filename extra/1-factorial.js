@@ -8,8 +8,14 @@
     Using a loop, complete the function below so it returns the factorial of the number being passed in. 
 */
 
-function factorial(input) {
-  // TODO
+function factorial(n) {
+  let i = 1;
+    let factorial = 1;
+    while (i < n) {
+        i++;
+        factorial *= i;
+    }
+    return factorial;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
