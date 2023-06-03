@@ -7,9 +7,9 @@
 function isAcceptableUser(userAge, isLoggedIn) {
   
   if (userAge >= 18 && isLoggedIn) {
-    return "User is acceptable";
+    return true;
   } else {
-    return "User is not acceptable";
+    return false;
   }
 }
 
@@ -25,11 +25,11 @@ function isAcceptableUser(userAge, isLoggedIn) {
 function applyDiscount(totalPrice) {
 
  if (totalPrice <= 200) {
-    let DiscountedPrice1 = totalPrice - (totalPrice * 0.05);
-    return DiscountedPrice1;
+    let discountedPrice1 = totalPrice - (totalPrice * 0.05);
+    return discountedPrice1;
  } else {
-    let DiscountedPrice2 = totalPrice - (totalPrice * 0.1)
-    return DiscountedPrice2;
+    let discountedPrice2 = totalPrice - (totalPrice * 0.1)
+    return discountedPrice2;
  }
 }
 
@@ -38,16 +38,14 @@ function applyDiscount(totalPrice) {
   */
 function printOddNumbers(limit) {
   let i = 0;
-  let evenArray = [];
 
   while (i < limit) {
     
     if (i % 2 !== 0) {
-      evenArray[i] = i;                   //UNFINISHED
-    } else {}
+      console.log(i);                   
+    }
     i++;
   }
-  console.log(evenArray);
 }
 
 /*
@@ -69,9 +67,9 @@ function buyTwoGetTheCheapestFree(price1, price2) {
   - if the person is 90 or older it should return "You Don't Need To Register"
 */
 function canRegister(age) {
-  if (age < 12) {
+  if (age= 12) {
     return "You Are Too Young To Register";
-  } else if (age >= 12 && age <= 90) {
+  } else if (age > 12 && age < 90) {
     return "You Can Register";
   } else {
     return "You Don't Need To Register";
