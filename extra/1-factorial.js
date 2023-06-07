@@ -8,8 +8,15 @@
     Using a loop, complete the function below so it returns the factorial of the number being passed in. 
 */
 
-function factorial(input) {
-  // TODO
+function factorial(n) {
+  var result = 1;
+  for (var i = n; i > 0; i--) {
+    result = result*i;
+  }
+  return result;
+  // if (n === 0 | n === 1) return 1;
+  // return n * factorial(n - 1);
+
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
