@@ -4,7 +4,13 @@
     1. the user should be 18 or older
     2. the user must be logged in
 */
-function isAcceptableUser(userAge, isLoggedIn) {}
+function isAcceptableUser(userAge, isLoggedIn) {
+  if(userAge > 17 && isLoggedIn == true){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
   Complete the function to apply discount percent based on how much is totalPrice in user cart.
@@ -15,18 +21,39 @@ function isAcceptableUser(userAge, isLoggedIn) {}
     is applieds and 142.5 should be returned)
 */
 
-function applyDiscount(totalPrice) {}
+function applyDiscount(totalPrice) {
+  let result = 0;
+  if(totalPrice > 200) {
+    result = totalPrice - (totalPrice * 10) / 100;
+  } else {
+    result = totalPrice - (totalPrice * 5) /100;
+  }
+  return result;
+}
 
 /*
   Complete the function to print to the console the odd numbers between 1 and limit (use a while loop):
   */
-function printOddNumbers(limit) {}
-
+function printOddNumbers(limit) {
+  let result = 1;
+  while( limit > result) {
+  console.log(result);
+  result += 2;
+}
+}
 /*
   Complete the buyTwoGetTheCheapestFree function: if user buys two items, the cheapest item will be free!
   The function should return the price to be paid once the discount is applied.
 */
-function buyTwoGetTheCheapestFree(price1, price2) {}
+function buyTwoGetTheCheapestFree(price1, price2) {
+  let largest;
+  if(price1 > price2) {
+    largest = price1;
+  } else {
+    largest = price2;
+  }
+  return largest;
+}
 
 /*
   Complete the function to determine if it is suitable for a person to register based on their age!
@@ -34,7 +61,18 @@ function buyTwoGetTheCheapestFree(price1, price2) {}
   - if the person is older than 12 and younger than 90 it should return "You Can Register"
   - if the person is 90 or older it should return "You Don't Need To Register"
 */
-function canRegister(age) {}
+function canRegister(age) {
+  let answer;
+  if(age < 13) {
+   answer = "You Are Too Young To Register";
+  }
+  else if (age < 90) {
+    answer = "You Can Register";
+  }
+  else { answer = "You Don't Need To Register";};
+  return answer;
+}
+
 
 /*
   Complete the function so that it prints out to the console numbers in reverse order starting at
@@ -45,7 +83,11 @@ function canRegister(age) {}
   )
 */
 
-function countReverse(number) {}
+function countReverse(number) {
+ for(let i = number; i > 0; i--) {
+  console.log(i);
+ }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
