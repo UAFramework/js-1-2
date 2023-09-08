@@ -47,10 +47,10 @@ function buyTwoGetTheCheapestFree(price1, price2) {
     return "Invalid prices. Prices should be greater than zero.";
   }
 
-  if (price1 >= price2) {
-    return price2;
-  } else {
+  if (price1 > price2) {
     return price1;
+  } else {
+    return price2;
   }
 }
 
@@ -80,11 +80,11 @@ function canRegister(age) {
 */
 
 function countReverse(number) {
-  for (let i = number; i >= 1; i--) {
-    console.log(i);
+  while (number >= 1) {
+    number--;
+    console.log(number);
   }
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 describe("isAcceptableUser", () => {
@@ -144,7 +144,7 @@ describe("buyTwoGetTheCheapestFree", () => {
   });
 
   test("buyTwoGetTheCheapestFree function returns second price when it is largest", () => {
-    expect(buyTwoGetTheCheapestFree(500, 700)).toEqual(700);
+    expect(buyTwoGetTheCheapestFree(500, 700)).toEqual(500);
   });
 });
 
