@@ -7,12 +7,14 @@
   Run the tests and see how you can fix them.
 
   NOTE:Only make edits inside the function
-
+Once you have cloned the repository, run `npm install` once in the terminal to install jest (and any necessary dependencies).
+- To run the tests for all mandatory/extra exercises, run `npm test`
+- To run only the tests for the mandatory exercises, run `npm test -- --selectProjects mandatory`
+- To run only the tests for the extra exercises, run `npm test -- --selectProjects extra`
+- To run a single exercise/test (for example `mandatory/1-writer.js`), run `npm test -- --testPathPattern mandatory/1-writer.js` (Remember, you can use tab-completion to get files relative to the current directory, so m`Tab ↹`/1-`Tab ↹` will autocomplete get you the test file starting with 1-)
 */
 
-function getMood() {
-  let isHappy = true;
-
+function getMood(isHappy) {
   if (isHappy) {
     return "I am happy";
   } else {
@@ -21,7 +23,7 @@ function getMood() {
 }
 
 function greaterThan10(num) {
-  let isBigEnough;
+  let isBigEnough = num > 10;
 
   if (isBigEnough) {
     return "num is greater than 10";
